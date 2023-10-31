@@ -1,0 +1,16 @@
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+[data-vertical] {
+  margin: auto 0;
+}
+
+[data-horizontal] {
+  margin: 0 auto;
+}
+
+[data-vertical][data-horizontal] {
+  margin: auto;
+}

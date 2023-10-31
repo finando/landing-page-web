@@ -1,0 +1,37 @@
+{
+  "branches": [
+    "master"
+  ],
+  "tagFormat": "${version}",
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "verifyReleaseCmd": "echo \"nextReleaseVersion=${nextRelease.version}\" >> $GITHUB_OUTPUT"
+      }
+    ],
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/npm",
+      {
+        "tarballDir": "lib"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          "lib/*.tgz"
+        ]
+      }
+    ],
+    "@semantic-release/git"
+  ]
+}

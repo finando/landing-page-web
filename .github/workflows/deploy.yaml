@@ -1,0 +1,66 @@
+name: Deploy
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      version:
+        required: true
+        type: string
+      region:
+        required: false
+        type: string
+        default: eu-west-1
+    secrets:
+      FiNANDO_GITHUB_BOT_TOKEN:
+        required: true
+
+env:
+  HUSKY: 0
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.version }}
+
+      - uses: actions/setup-node@v3
+        with:
+          registry-url: https://npm.pkg.github.com
+          node-version: 18
+          cache: npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.FiNANDO_GITHUB_BOT_TOKEN }}
+
+      - name: Install dependencies
+        run: npm ci --quiet
+
+      - name: Build
+        run: npm run build
+
+      - name: Install envsubst
+        run: |
+          sudo apt-get update
+          sudo apt-get install gettext-base
+
+      - name: Create configuration
+        run: envsubst < ./config.template > ./lib/interactions/config.js;
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ inputs.region }}
+          role-to-assume: ${{ vars.AWS_ROLE_FOR_GITHUB_ACTIONS }}
+
+      - name: Deploy to AWS S3 bucket
+        run: aws s3 sync lib s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete

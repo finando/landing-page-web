@@ -1,0 +1,29 @@
+/* https://github.com/LeonGeldsch/css_material_input/blob/main/css/style.css */
+
+input {
+  padding: 14px 18px;
+  border: 1px solid #c9d4e1;
+  border-radius: 4px;
+  background: white;
+  font-family: inherit;
+  font-size: 16px;
+  text-align: attr(data-text-align);
+}
+
+input[data-fluid] {
+  width: 100%;
+}
+
+input[data-text-align="center"] {
+  text-align: center;
+}
+
+input::placeholder {
+  color: #9faab6;
+}
+
+input:autofill,
+input:autofill:hover,
+input:autofill:focus {
+  box-shadow: 0 0 0 1000px white inset;
+}

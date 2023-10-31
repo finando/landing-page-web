@@ -1,0 +1,8 @@
+{
+  "*.{ts,tsx,js,jsx,json}": [
+    "npm run lint:eslint:staged:fix"
+  ],
+  "*.css": [
+    "npm run lint:stylelint:staged:fix"
+  ]
+}

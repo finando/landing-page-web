@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@finando/typescript-config/react",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "jsxImportSource": "@builder.io/qwik",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "WebWorker",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "paths": {
+      "@app/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "adapters"
+  ],
+  "files": [
+    "vite.config.ts",
+    "jest.config.ts"
+  ],
+  "exclude": [
+    "lib",
+    "node_modules"
+  ]
+}

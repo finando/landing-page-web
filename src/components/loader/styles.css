@@ -1,0 +1,19 @@
+span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 0.3cqmin solid white;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 0.8s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

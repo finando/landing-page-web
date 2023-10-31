@@ -1,0 +1,10 @@
+.DS_Store
+
+.vscode
+
+lib
+coverage
+node_modules
+server
+
+public/config.js

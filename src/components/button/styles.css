@@ -1,0 +1,479 @@
+button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: inherit;
+  text-transform: uppercase;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transform: translateZ(0);
+}
+
+button:disabled > i,
+button:disabled > i path {
+  fill: #9faab6;
+}
+
+button:disabled {
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
+  color: #9faab6;
+}
+
+button:disabled[data-variant="contained"][data-theme="light"] {
+  background: #f4f5f7;
+}
+
+button:disabled[data-variant="contained"][data-theme="dark"] {
+  background: #505b6633;
+}
+
+button:disabled[data-variant="outlined"][data-theme="light"] {
+  border-color: #f4f5f7;
+}
+
+button:disabled[data-variant="outlined"][data-theme="dark"] {
+  border-color: #505b6633;
+}
+
+button[data-size="small"] {
+  font-size: 12px;
+}
+
+button[data-size="small"] > i {
+  height: 12px;
+  width: 12px;
+  min-height: 12px;
+  min-width: 12px;
+  transform: scale(1.1);
+}
+
+button[data-size="medium"] {
+  font-size: 14px;
+}
+
+button[data-size="medium"] > i {
+  height: 14px;
+  width: 14px;
+  min-height: 14px;
+  min-width: 14px;
+  transform: scale(1.2);
+}
+
+button[data-size="large"] {
+  font-size: 16px;
+}
+
+button[data-size="large"] > i {
+  height: 16px;
+  width: 16px;
+  min-height: 16px;
+  min-width: 16px;
+  transform: scale(1.3);
+}
+
+button:not(:disabled)[data-variant="contained"] {
+  box-shadow:
+    0 3px 1px -2px rgb(0 0 0 / 20%),
+    0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+button[data-variant="contained"][data-size="small"] {
+  padding: 6px 10px;
+}
+
+button[data-variant="contained"][data-size="medium"] {
+  padding: 10px 14px;
+}
+
+button[data-variant="contained"][data-size="large"] {
+  padding: 14px 18px;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="blue"] {
+  background: #439ef8;
+  color: #fff;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="blue"]:hover {
+  background: #007dd3;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="red"] {
+  background: #ff524f;
+  color: #fff;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="red"]:hover {
+  background: #d82b33;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="yellow"] {
+  background: #cd983a;
+  color: #fff;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="yellow"]:hover {
+  background: #9c6e07;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="green"] {
+  background: #4fc970;
+  color: #fff;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="green"]:hover {
+  background: #18a14c;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="neutral"][data-theme="light"] {
+  background: #2d3741;
+  color: #fff;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="neutral"][data-theme="light"]:hover {
+  background: black;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="neutral"][data-theme="dark"] {
+  background: #505b66;
+  color: #fff;
+}
+
+button:not(:disabled)[data-variant="contained"][data-colour="neutral"][data-theme="dark"]:hover {
+  background: #505b6680;
+}
+
+button[data-variant="outlined"] {
+  border: 2px solid transparent;
+  background: none;
+}
+
+button[data-variant="outlined"][data-size="small"] {
+  padding: 4px 8px;
+}
+
+button[data-variant="outlined"][data-size="medium"] {
+  padding: 8px 12px;
+}
+
+button[data-variant="outlined"][data-size="large"] {
+  padding: 12px 16px;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="blue"] {
+  color: #439ef8;
+  border-color: #439ef8;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="blue"]:hover {
+  background: #439ef80d;
+  border-color: #439ef8;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="red"] {
+  color: #ff524f;
+  border-color: #ff524f80;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="red"]:hover {
+  background: #ff524f0d;
+  border-color: #ff524f;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="yellow"] {
+  color: #cd983a;
+  border-color: #cd983a80;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="yellow"]:hover {
+  background: #cd983a0d;
+  border-color: #cd983a;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="green"] {
+  color: #4fc970;
+  border-color: #4fc97080;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="green"]:hover {
+  background: #4fc9700d;
+  border-color: #4fc970;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="neutral"][data-theme="light"] {
+  color: #2d3741;
+  border-color: #2d374180;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="neutral"][data-theme="light"]:hover {
+  background: #f4f5f7b3;
+  border-color: #2d3741;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="neutral"][data-theme="dark"] {
+  color: #fff;
+  border-color: #505b66;
+}
+
+button:not(:disabled)[data-variant="outlined"][data-colour="neutral"][data-theme="dark"]:hover {
+  background: #505b6633;
+  border-color: #c9d4e1;
+}
+
+button[data-variant="text"] {
+  background: none;
+  border-color: transparent;
+}
+
+button[data-variant="text"][data-size="small"] {
+  padding: 6px 10px;
+}
+
+button[data-variant="text"][data-size="medium"] {
+  padding: 10px 14px;
+}
+
+button[data-variant="text"][data-size="large"] {
+  padding: 14px 18px;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="blue"] {
+  color: #439ef8;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="blue"]:hover {
+  background: #439ef80d;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="red"] {
+  color: #ff524f;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="red"]:hover {
+  background: #ff524f0d;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="yellow"] {
+  color: #cd983a;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="yellow"]:hover {
+  background: #cd983a0d;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="green"] {
+  color: #4fc970;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="green"]:hover {
+  background: #4fc9700d;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="neutral"][data-theme="light"] {
+  color: #2d3741;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="neutral"][data-theme="light"]:hover {
+  background: #f4f5f7b3;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="neutral"][data-theme="dark"] {
+  color: #fff;
+}
+
+button:not(:disabled)[data-variant="text"][data-colour="neutral"][data-theme="dark"]:hover {
+  background: #505b6633;
+}
+
+button[data-variant="icon"] {
+  background: none;
+  border-radius: 100%;
+}
+
+button[data-variant="icon"][data-size="small"] {
+  padding: 8px;
+}
+
+button[data-variant="icon"][data-size="medium"] {
+  padding: 12px;
+}
+
+button[data-variant="icon"][data-size="large"] {
+  padding: 16px;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="blue"] {
+  color: #439ef8;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="blue"] > i {
+  fill: #439ef8;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="blue"]:hover {
+  background: #439ef80d;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="red"] {
+  color: #ff524f;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="red"] > i {
+  fill: #ff524f;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="red"]:hover {
+  background: #ff524f0d;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="yellow"] {
+  color: #cd983a;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="yellow"] > i {
+  fill: #cd983a;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="yellow"]:hover {
+  background: #cd983a0d;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="green"] {
+  color: #4fc970;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="green"] > i {
+  fill: #4fc970;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="green"]:hover {
+  background: #4fc9700d;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="neutral"][data-theme="light"] {
+  color: #2d3741;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="neutral"][data-theme="light"] > i {
+  fill: #2d3741;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="neutral"][data-theme="light"]:hover {
+  background: #f4f5f7b3;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="neutral"][data-theme="dark"] {
+  color: #fff;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="neutral"][data-theme="dark"] > i {
+  fill: #fff;
+}
+
+button:not(:disabled)[data-variant="icon"][data-colour="neutral"][data-theme="dark"]:hover {
+  background: #505b6633;
+}
+
+button > .ripple-container {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+button[data-variant="icon"] > .ripple-container {
+  border-radius: 100%;
+}
+
+button .ripple {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.75;
+  transform: scale(0);
+  z-index: 1;
+  animation-name: ripple;
+  animation-fill-mode: forwards;
+}
+
+button[data-variant="contained"] .ripple {
+  background: #fff;
+}
+
+button > .ripple-container[data-ignore-cursor-position="true"] > .ripple {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation-name: centered-ripple;
+}
+
+button:not([data-variant="contained"])[data-colour="blue"] .ripple {
+  background: #439ef8;
+}
+
+button:not([data-variant="contained"])[data-colour="red"] .ripple {
+  background: #ff524f26;
+}
+
+button:not([data-variant="contained"])[data-colour="yellow"] .ripple {
+  background: #cd983a26;
+}
+
+button:not([data-variant="contained"])[data-colour="green"] .ripple {
+  background: #4fc97026;
+}
+
+button:not([data-variant="contained"])[data-colour="neutral"][data-theme="light"] .ripple {
+  background: #2d374126;
+}
+
+button:not([data-variant="contained"])[data-colour="neutral"][data-theme="dark"] .ripple {
+  background: #ffffff26;
+}
+
+button[data-size="small"] > i.start {
+  margin-right: 4px;
+}
+
+button[data-size="medium"] > i.start {
+  margin-right: 8px;
+}
+
+button[data-size="large"] > i.start {
+  margin-right: 12px;
+}
+
+button[data-size="small"] > i.end {
+  margin-left: 4px;
+}
+
+button[data-size="medium"] > i.end {
+  margin-left: 8px;
+}
+
+button[data-size="large"] > i.end {
+  margin-left: 12px;
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes centered-ripple {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
