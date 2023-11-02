@@ -16,6 +16,23 @@ on:
     secrets:
       FiNANDO_GITHUB_BOT_TOKEN:
         required: true
+  workflow_dispatch:
+    inputs:
+      environment:
+        required: true
+        type: choice
+        options:
+          - development
+          - production
+      version:
+        required: true
+        type: string
+      region:
+        required: false
+        type: choice
+        options:
+          - eu-west-1
+        default: eu-west-1
 
 env:
   HUSKY: 0
