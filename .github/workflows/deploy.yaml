@@ -71,7 +71,7 @@ jobs:
           sudo apt-get install gettext-base
 
       - name: Create configuration
-        run: envsubst < ./config.template > ./lib/interactions/config.js;
+        run: envsubst < ./config.template > ./lib/config.js;
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
