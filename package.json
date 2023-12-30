@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@finando/landing-page-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Organisation's landing page.",
   "repository": {
     "type": "git",
