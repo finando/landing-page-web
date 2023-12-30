@@ -17,7 +17,32 @@ export default component$(() => {
       <title>{head.title}</title>
 
       <link rel='canonical' href={url.href} />
+
+      <link
+        rel='apple-touch-icon'
+        sizes='180x180'
+        href='/apple-touch-icon.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='/favicon-32x32.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='/favicon-16x16.png'
+      />
+      <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#1c1c1c' />
+      <meta name='apple-mobile-web-app-title' content='Finando' />
+      <meta name='application-name' content='Finando' />
+      <meta name='msapplication-TileColor' content='#1c1c1c' />
+      <meta name='theme-color' content='#1c1c1c' />
+      <link rel='icon' href='/favicon.ico' sizes='any' />
       <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+
       <link rel='manifest' href='/manifest.json' />
 
       <link rel='preconnect' href='https://rsms.me/' />
