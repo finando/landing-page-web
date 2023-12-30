@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/finando/landing-page-web/compare/1.0.1...1.0.2) (2023-12-30)
+
+
+### Bug Fixes
+
+* remove Safari pinned tab favicon ([d868c86](https://github.com/finando/landing-page-web/commit/d868c86a9d6957b22f805d197a5c08edda4042c7))
+
 ## [1.0.1](https://github.com/finando/landing-page-web/compare/1.0.0...1.0.1) (2023-12-30)
 
 
